@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="minutes_text_widget" parent="hours_text_widget">
+    <item name="android:textColor">@color/holo_blue_light</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:fontFamily">sans-serif-light</item>
+  </style>
+
+  <style name="minutes_text_keyguard." parent="hours_text_keyguard">
+    <item name="android:textColor">@color/holo_blue_light</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:fontFamily">sans-serif-light</item>
+  </style>
+
+</resources>

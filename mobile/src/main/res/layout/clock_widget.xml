@@ -1,21 +1,39 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="@dimen/widget_margin"
-                android:background="#09C">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/widget_margin">
 
-  <TextView
-      android:id="@+id/appwidget_text"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_centerHorizontal="true"
-      android:layout_centerVertical="true"
-      android:text="@string/appwidget_text"
-      android:textColor="#ffffff"
-      android:textSize="24sp"
-      android:textStyle="bold|italic"
-      android:layout_margin="8dp"
-      android:contentDescription="@string/appwidget_text"
-      android:background="#09C"/>
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:background="@drawable/widget_background"
+      android:paddingTop="0dp"
+      android:paddingBottom="0dp"
+      android:paddingLeft="12dp"
+      android:paddingRight="0dp">
 
-</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/hours_text_widget"
+        android:gravity="bottom"
+        android:id="@+id/hours"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/minutes_text_widget"
+        android:layout_marginTop="-8dp"
+        android:layout_marginBottom="-8dp"
+        android:id="@+id/tens"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/minutes_text_widget"
+        android:id="@+id/minutes"/>
+  </LinearLayout>
+</FrameLayout>
